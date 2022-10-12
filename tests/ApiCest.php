@@ -73,7 +73,7 @@ class ApiCest
 
     public function tryApiBrlToUsd(ApiTester $I)
     {
-        $I->sendGET('/7.8/BRL/USD/0.5');
+        $I->sendGET('/7,8/BRL/USD/0,5');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson([
@@ -84,7 +84,7 @@ class ApiCest
 
     public function tryApiUsdToBrl(ApiTester $I)
     {
-        $I->sendGET('/7/USD/BRL/0.5');
+        $I->sendGET('/7/USD/BRL/0,5');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson([
